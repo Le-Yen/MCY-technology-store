@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header">
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.PNG" width="250px"></a>
+
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="active" href="index.html">Trang chủ</a></li>
+                        <li><a href="products.html">Sản phẩm</a></li>
+                        <li><a href="lienhe.html">Liên hệ</a></li>
+                        <li><a href="account.html">Tài khoản</a></li>
+                </ul>
+                <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+                crossorigin="anonymous"></script>
+                <script type="text/javascript">
+                $(document).on('click','ul li', function(){
+                    $(this).addClass('active').siblings().removeClass('active')
+                })</script>
+            </nav>
+            <img src="images/bag.jpg" width="30px" height="30px">
+        </div>       
+    </div>
+</div>
+    <!-------single product details--------->
+    <div class="small-container single-product">
+        <div class="row">
+            <div class="col-2">
+                <img src="images/product1.png" width="90%" id="ProductImg">
+
+                <div class="small-img-row">
+                    <div class="small-img-col">
+                        <img src="images/product1.png" width="90%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/DellXPS.png" width="90%" class="small-img">
+                    </div>
+                    <div class="small-img-col">
+                        <img src="images/DellXPS2.png" width="90%" class="small-img">
+                    </div>                   
+                </div>
+            </div>
+            <div class="col-2">
+                <p>HP PAVILION 14</p>
+                <h1>LAPTOP HP PAVILION 14 - DV0009TU </h1>
+                <h4>19.990.000đ</h4>
+                <select>
+                    <option>Select Color</option>
+                    <option>Black</option>
+                    <option>White</option>
+                    <option>Blue</option>
+                    <option>Pink</option>
+                    <option>Orange</option>
+                </select>
+                <input type="number" value="1">
+                <a href="" class="btn">Thêm vào giỏ</a>
+                <h3>Chi tiết sản phẩm</h3>
+                <br>
+                <p>i5-1135G7, Ram 8GB, SSD 512GB, Màn hình 14" Full HD, Win 10</p>
+            </div>
+        </div>
+    </div>
+
+    <!----------title---------->
+    <div class="small-container">
+        <div class="row row-2"></div>
+        <h2>Sản phẩm liên quan</h2>
+    </div>
+    <!------------------ featured products ----------->
+    <div class="small-container">
+        <div class="row">
+            <div class="col-4">
+                <img src="images/AcerNitro5.PNG">
+                <h4>Acer Nitro 5</h4>
+                <div class="rating">
+                    <i class="fas fa-star" "></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="far fa-star" ></i>                
+                </div>
+                <p>27.990.000đ</p>
+            </div>
+            <div class="col-4">
+                <img src="images/AsusROG_G553.jpg">
+                <h4>Asus ROG G553</h4>
+                <div class="rating">
+                    <i class="fas fa-star" "></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="far fa-star" ></i>                
+                </div>
+                <p>49.990.000đ</p>
+            </div>
+            <div class="col-4">
+                <img src="images/HP.jpg">
+                <h4>HP Pavilion 14</h4>
+                <div class="rating">
+                    <i class="fas fa-star" "></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="fas fa-star" ></i>
+                    <i class="far fa-star" ></i>                
+                </div>
+                <p>17.990.000đ</p>
+            </div>
+        </div>   
+    </div>  
+
+    <!-- js for form -->
+    <script>
+        var LoginForm =document.getElementById("LoginForm");
+        var RegForm =document.getElementById("RegForm");
+        var Indicator =document.getElementById("Indicator");
+        
+        function register(){
+            RegForm.style.transform = "translateX(0px)";
+            LoginForm.style.transform = "translateX(0px)";
+            Indicator.style.transform = "translateX(100px)";
+        }
+
+        function login(){
+            RegForm.style.transform = "translateX(300px)";
+            LoginForm.style.transform = "translateX(300px)";
+            Indicator.style.transform = "translateX(0px)";
+        }
+        
+    </script>
+
+
+    <script>
+        var ProductImg = document.getElementById("ProductImg");
+        var SmallImg = document.getElementsByClassName("small-img");
+
+        SmallImg[0].onclick = function(){
+            ProductImg.src = SmallImg[0].src;
+        }
+        SmallImg[1].onclick = function(){
+            ProductImg.src = SmallImg[1].src;
+        }
+        SmallImg[2].onclick = function(){
+            ProductImg.src = SmallImg[2].src;
+        }
+    </script>
+</body>
+</html>
